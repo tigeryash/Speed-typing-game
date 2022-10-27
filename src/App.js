@@ -74,7 +74,7 @@ export default function App() {
           />
           <h3>Time remaining: {time}</h3>
           <button onClick={start} disabled={isRunning}>
-            {!isRunning ? "START" : "TYPE"}
+            {!isRunning ? 'START' : 'TYPE'}
           </button>
           <h2>Word Count: {words}</h2>
         </div>
@@ -82,7 +82,7 @@ export default function App() {
         <div>
           <form onSubmit={access}>
             <h1>How fast do you type</h1>
-            {reasonable && <h2>Use a number below 1000 and above 0</h2>}
+            {reasonable && <h2>Use a number below 60 and above 0</h2>}
             <input
               className="input"
               type="text"
