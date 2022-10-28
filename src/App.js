@@ -2,7 +2,7 @@ import React, { useState, useRef, useEffect } from 'react';
 import './style.css';
 
 export default function App() {
-  const [enter, setEnter] = useState(false);
+  const [enter, setEnter] = useState(true);
   const [isRunning, setIsRunning] = useState(false);
   const [words, setWords] = useState(0);
   const [time, setTime] = useState('');
@@ -65,7 +65,7 @@ export default function App() {
     <main>
       {enter ? (
         <div>
-          <h1>How fast do you type?</h1>
+          <h1>How <span>fast</span> do you type?</h1>
           <textarea
             ref={textBoxRef}
             disabled={!isRunning}
@@ -81,7 +81,7 @@ export default function App() {
       ) : (
         <div>
           <form onSubmit={access}>
-            <h1>How fast do you type</h1>
+            <h1>How <span>fast</span> do you type</h1>
             {reasonable && <h2>Use a number below 60 and above 0</h2>}
             <input
               className="input"
